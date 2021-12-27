@@ -61,3 +61,11 @@ UtilクラスやLoggerクラスでは、以下を行う。
 
 
 
+## （以下、編集中）
+## (Appendix.)Docker関連ファイルの使用方法
+### NVIDIA GPU を使用するためのコンテナ
+現時点でNVIDIAのGPUのみDockerコンテナで使用可能。  
+以下に使用方法
+
+
+
