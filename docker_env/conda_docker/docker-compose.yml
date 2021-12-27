@@ -1,0 +1,14 @@
+# anacondaに含まれていないライブラリをインストールしたい場合は、以下コマンドで実行中のコンテナに入り、インストールコマンドを実行
+# docker exec <起動中のCONTAINER ID> -it /bin/bash
+version: '3.8'
+services:
+  conda-env:
+    container_name: conda-container
+    image: continuumio/anaconda3:latest
+    volumes:
+      - ../../.:/notebook/
+    working_dir: /notebook/
+    command: >
+      bash -c "jupyter notebook --ip 0.0.0.0 --allow-root --no-browser --NotebookApp.disable_check_xsrf=True  --NotebookApp.token='' --NotebookApp.password='' /notebook"
+    ports:
+      - "8888:8888"

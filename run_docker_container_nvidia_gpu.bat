@@ -1,0 +1,1 @@
+docker run --name nvidia-gpu-container --gpus all -it --rm -v "%cd%":/notebook -p 8888:8888 nvcr.io/nvidia/tensorflow:21.12-tf2-py3
